@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>adminDash</title>
+    <title>AdminDash</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -15,14 +15,12 @@
     <div class="container">
       <div class="header">
         <div class="headerUp">
-          <!-- <div class="menu">
-          <ul>
-            <li>home</li>
-            <li>profile</li>
-            <li>contact</li>
-            <li>settings</li>
-          </ul>
-        </div> -->
+          <div class="searchDiv">
+            <input class="searchBar" type="text" placeholder="search" />
+            <span id="searchIcon" class="material-symbols-outlined">
+              search
+            </span>
+          </div>
           <div class="profile">
             <h5>name niminen</h5>
             <span id="#profilePic" class="material-symbols-outlined">
@@ -31,13 +29,6 @@
           </div>
         </div>
         <div class="headerLow">
-          <div class="searchDiv">
-            <input class="searchBar" type="text" placeholder="search" />
-            <span id="searchIcon" class="material-symbols-outlined">
-              search
-            </span>
-          </div>
-
           <div class="headerButtons">
             <button class="headerButton">new</button>
             <button class="headerButton">upload</button>
@@ -47,15 +38,19 @@
       </div>
 
       <div class="sidebar">
-        <div class="logo"><h2>adminDash</h2></div>
+        <div class="logo">
+          <h2>AdminDash</h2>
+          <hr />
+        </div>
+
         <ul>
           <li>
             <span class="material-symbols-outlined"> home </span>
-            Home
+            <p class="liP">Home</p>
           </li>
           <li>
             <span class="material-symbols-outlined"> local_activity </span
-            >tickets
+            ><p class="liP">tickets</p>
           </li>
           <li>
             <span class="material-symbols-outlined"> folder_open </span>
@@ -65,8 +60,8 @@
             <span class="material-symbols-outlined"> support_agent </span>agents
           </li>
           <li><span class="material-symbols-outlined"> boy </span>customers</li>
+          <hr />
         </ul>
-
         <ul>
           <li>
             <span class="material-symbols-outlined"> settings </span>settings
@@ -78,65 +73,149 @@
           <li>
             <span class="material-symbols-outlined"> security </span>privacy
           </li>
+          <hr />
+          <button id="signout" class="headerButton">sign out</button>
         </ul>
       </div>
 
       <div class="main">
-        <div class="section-title">Open Tickets</div>
+        <div class="section-title">Your Assigned Tickets</div>
         <div class="project">
-          <h4>ticket 4</h4>
-
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus ex
-          reiciendis, temporibus quisquam quasi, itaque tenetur debitis
-          quibusdam odio.
+          <h4 class="contentHeader">ticket 4</h4>
+            Change color of sign out button.
+            <br>
+            <br>
+            Reported by: <em>Tommi Mäki</em> 
+          
+          <div class="projectIcons">
+            <hr />
+            <span class="material-symbols-outlined"> delete </span>
+            <span class="material-symbols-outlined"> done </span>
+            <span class="material-symbols-outlined"> star </span>
+          </div>
         </div>
         <div class="project">
+          <h4 class="contentHeader">ticket 4</h4>
           Soluta fugit dolorem dignissimos eos voluptatum, nobis corporis,
           asperiores quasi cum harum dolorum hic illo voluptates sed accusamus
-          sint. Cupiditate delectus adipisci exercitationem sequi nulla maxime
-          quod voluptas vero recusandae!
+          sint.
+          <div class="projectIcons">
+            <hr />
+            <span class="material-symbols-outlined"> delete </span>
+            <span class="material-symbols-outlined"> done </span>
+            <span class="material-symbols-outlined"> star </span>
+          </div>
         </div>
         <div class="project">
+          <h4 class="contentHeader">ticket 4</h4>
           Explicabo sint ipsa doloremque assumenda ducimus accusantium vel
           impedit rem quaerat dolorem, illum maxime iusto ut, corporis officia
-          quibusdam hic error eaque facere. Doloremque, cum. Voluptatem
-          consequuntur earum provident assumenda?
+          quibusdam hic error eaque
+          <div class="projectIcons">
+            <hr />
+            <span class="material-symbols-outlined"> delete </span>
+            <span class="material-symbols-outlined"> done </span>
+            <span class="material-symbols-outlined"> star </span>
+          </div>
         </div>
         <div class="project">
+          <h4 class="contentHeader">ticket 4</h4>
           Nisi sequi adipisci hic fuga? In dolore laboriosam tenetur
-          voluptatibus id placeat maxime enim aspernatur ipsum! Iure iste
-          placeat nostrum vero laboriosam asperiores dignissimos est ab, impedit
-          magni? Dolorum, perspiciatis.
+          voluptatibus id placeat maxime
+          <div class="projectIcons">
+            <hr />
+            <span class="material-symbols-outlined"> delete </span>
+            <span class="material-symbols-outlined"> done </span>
+            <span class="material-symbols-outlined"> star </span>
+          </div>
         </div>
         <div class="project">
+          <h4 class="contentHeader">ticket 4</h4>
           Maxime possimus doloribus commodi at cupiditate. Porro molestiae iste
-          blanditiis a sapiente sed dolore similique quas nostrum. Facilis dicta
-          tempora quae eius numquam inventore dolor expedita laboriosam
-          voluptatum? Ipsam, rem.
+          blanditiis a sapiente sed
+          <div class="projectIcons">
+            <hr />
+            <span class="material-symbols-outlined"> delete </span>
+            <span class="material-symbols-outlined"> done </span>
+            <span class="material-symbols-outlined"> star </span>
+          </div>
         </div>
         <div class="project">
+          <h4 class="contentHeader">ticket 4</h4>
           Vitae aliquam officia alias odit! Nobis est qui nihil dolorem tempora
           illum doloremque, nemo amet praesentium, blanditiis repudiandae?
-          Adipisci labore consequuntur illo aperiam quasi quis nulla quia
-          quibusdam molestiae dolor!
+          Adipisci labore
+          <div class="projectIcons">
+            <hr />
+            <span class="material-symbols-outlined"> delete </span>
+            <span class="material-symbols-outlined"> done </span>
+            <span class="material-symbols-outlined"> star </span>
+          </div>
         </div>
         <div class="project">
+          <h4 class="contentHeader">ticket 4</h4>
           Vitae aliquam officia alias odit! Nobis est qui nihil dolorem tempora
           illum doloremque, nemo amet praesentium, blanditiis repudiandae?
-          Adipisci labore consequuntur illo aperiam quasi quis nulla quia
-          quibusdam molestiae dolor!
+          Adipisci labore
+          <div class="projectIcons">
+            <hr />
+            <span class="material-symbols-outlined"> delete </span>
+            <span class="material-symbols-outlined"> done </span>
+            <span class="material-symbols-outlined"> star </span>
+          </div>
         </div>
       </div>
 
       <div class="rightSide">
         <div class="section-title">Open Tickets</div>
         <div class="newTickets">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, ea
-          illo accusantium dis
+          <div class="new-ticket">
+            <h4 class="contentHeader">ticket x</h4>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, ea
+            illo accusantium dis
+            <div class="projectIcons">
+              <hr />
+              <span class="material-symbols-outlined"> delete </span>
+              <span class="material-symbols-outlined"> done </span>
+              <span class="material-symbols-outlined"> star </span>
+            </div>
+          </div>
+          <div class="new-ticket">
+            <h4 class="contentHeader">ticket y</h4>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, ea
+            illo accusantium dis
+            <div class="projectIcons">
+              <hr />
+              <span class="material-symbols-outlined"> delete </span>
+              <span class="material-symbols-outlined"> done </span>
+              <span class="material-symbols-outlined"> star </span>
+            </div>
+          </div>
+          <div class="new-ticket">
+            <h4 class="contentHeader">ticket z</h4>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, ea
+            illo accusantium dis
+            <div class="projectIcons">
+              <hr />
+              <span class="material-symbols-outlined"> delete </span>
+              <span class="material-symbols-outlined"> done </span>
+              <span class="material-symbols-outlined"> star </span>
+            </div>
+          </div>
         </div>
+
+        <div class="secondary-title">Announcements</div>
         <div class="announcements">
+          <h4 class="contentHeader">maintenance break</h4>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corrupti
           ex obcaecati iusto a e
+          <hr />
+          <h4 class="contentHeader">policy update</h4>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corrupti
+          ex obcaecati iusto a e
+          <br />
+          <a href="">accept here</a>
+          <hr />
         </div>
       </div>
     </div>

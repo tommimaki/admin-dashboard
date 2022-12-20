@@ -1,21 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 * {
   margin: 0;
   padding: 0;
-  --color-accents: rgb(81, 81, 101);
+  box-sizing: border-box;
+  --color-accents: rgb(104, 104, 131);
   --color-base: rgb(255, 255, 255);
   --color-bg: rgb(238, 238, 238);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
-
-
-/* todo: dividerit ainakin sidebariin, header kuntoon
-main cona samalle tasalle, nappien muokkaus, buttonien lisäys */
 
 .container {
   background-color: var(--color-bg);
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: 1fr 3fr 3fr;
+  grid-template-columns: 1fr 5fr 2fr;
+  grid-template-rows: 1fr 10fr 1fr;
   grid-template-areas:
     "sidebar header header"
     "sidebar main rightside"
@@ -29,41 +27,30 @@ main cona samalle tasalle, nappien muokkaus, buttonien lisäys */
   box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 10px;
   grid-area: header;
   display: grid;
+  max-height: 110px;
+  grid-auto-rows: max-content;
   margin-bottom: 20px;
   border-radius: 10px;
+  color: var(--color-accents);
 }
 
-.headerUp{
+.headerUp {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
-
-}
-.divider{
-  background-color: rgb(219, 221, 231);
-  height: 100%;
-  width: 1px;
 }
 
-.menu ul {
-  list-style-type: none;
-  text-transform: capitalize;
-  display: grid;
-  grid-auto-flow: column;
-}
 
-.profile{
+.profile {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
   justify-content: end;
   text-transform: capitalize;
   font-size: larger;
-  padding: 10px;
-  column-gap: 10px;
+  padding: 5px;
+  column-gap: 3px;
 }
-
-
 
 .headerLow {
   display: grid;
@@ -77,6 +64,8 @@ main cona samalle tasalle, nappien muokkaus, buttonien lisäys */
   grid-auto-flow: column;
   box-shadow: black 2px 1px 2px;
   padding: 5px;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .searchBar {
@@ -95,14 +84,15 @@ main cona samalle tasalle, nappien muokkaus, buttonien lisäys */
 .headerButtons {
   display: grid;
   grid-auto-flow: column;
-  justify-content: end;
+  justify-content: start;
 }
 .headerButton {
   background-color: var(--color-accents);
   color: var(--color-base);
   padding: 5px;
-  width: 100px;
-  margin-left: 20px;
+  max-width: 100px;
+  min-width: 80px;
+  margin: 10px 0px 10px 20px;
   border-radius: 10px;
   max-height: 30px;
   min-height: 30px;
@@ -112,23 +102,23 @@ main cona samalle tasalle, nappien muokkaus, buttonien lisäys */
   text-transform: uppercase;
 }
 
+
 .logo {
   margin-top: 40px;
+  padding: 5px;
   align-self: flex-start;
+  justify-self: center;
   text-shadow: black 2px 2px 2px;
 }
 .sidebar {
-  
   background-color: var(--color-accents);
   color: rgb(255, 255, 255);
   grid-area: sidebar;
   display: grid;
-  grid-template-rows: 1fr 2fr 4fr;
+  grid-template-rows: repeat(auto-fit, minmax(100px, 200px));
   text-shadow: black 1px 1px;
 }
-.logo {
-  padding: 5px;
-}
+
 
 .sidebar > ul > li {
   padding-left: 5px;
@@ -137,14 +127,24 @@ main cona samalle tasalle, nappien muokkaus, buttonien lisäys */
   text-transform: capitalize;
   display: grid;
   grid-auto-flow: column;
+grid-template-columns:1fr 2fr ;
 }
-
+#signout{
+  border: 1px white solid;
+}
 .section-title {
-  color: var(--dark-text);
+  color: var(--color-accents);
   font-size: 22px;
   font-weight: 400;
   grid-column: 1 / -1;
   margin: 35px 30px 15px 30px;
+  text-align: center;
+}
+.secondary-title{
+
+  text-align: center;
+  font-weight: 500;
+
 }
 
 .main {
@@ -152,15 +152,23 @@ main cona samalle tasalle, nappien muokkaus, buttonien lisäys */
   grid-area: main;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: max-content;
   gap: 15px;
 }
 .project {
   background-color: var(--color-base);
-  border-left: ridge #32a1ce;
-  border-top: ridge #32a1ce;
+  border-left: var(--color-accents) ridge;
+  border-top: var(--color-accents) 2px solid;
   padding: 5px;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 2px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 4px 4px;
+  padding: 10px;
+  display: grid;
+
+}
+.projectIcons{
+  align-self: flex-end;
+
 }
 
 .rightSide {
@@ -168,9 +176,9 @@ main cona samalle tasalle, nappien muokkaus, buttonien lisäys */
   margin-top: 10px;
   grid-area: rightside;
   display: grid;
-  grid-template-rows: (auto-fit, minmax(200px, 1fr));
   gap: 10px;
- 
+  grid-auto-rows: max-content;
+  grid-template-columns: 1fr;
 }
 .newTickets {
   padding: 5px;
@@ -179,6 +187,9 @@ main cona samalle tasalle, nappien muokkaus, buttonien lisäys */
   margin-bottom: 10px;
   background-color: var(--color-base);
   overflow: auto;
+  border-left: ridge var(--color-accents);
+  padding: 10px;
+
 }
 .announcements {
   padding: 5px;
@@ -186,4 +197,49 @@ main cona samalle tasalle, nappien muokkaus, buttonien lisäys */
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 2px;
   background-color: var(--color-base);
   overflow: auto;
+  border-left: ridge var(--color-accents);
+}
+
+hr {
+  border: none;
+  border-top: 3px solid #bbb;
+  height: 2px;
+  margin: 10px;
+
+}
+
+button:hover{
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+li:hover{
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+.contentHeader{
+  text-align: center;
+  margin: 10px;
+}
+
+a:link, a:visited {
+  color: var(--color-accents);
+  text-decoration:none;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+span{
+  padding-left: 5px;
+}
+
+.new-ticket{
+  border-right: var(--color-accents) ridge;
+  border-bottom: var(--color-accents) 2px solid;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
 }
